@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-primary: #2563eb; /* Blue 600 */
+  --color-dark: #1e1b4b; /* Indigo 900 */
+  --color-accent: #06b6d4; /* Cyan 500 */
+  --spacing-8xl: 90rem;
+  --breakpoint-2xl: 1366px;
+
+  /* Status Colors for Monitoring */
+  --color-status-success: #16a34a; /* Green 600 - Available */
+  --color-status-warning: #f59e0b; /* Amber 500 - Pending */
+  --color-status-danger: #dc2626; /* Red 600 - Full/Alert */
+
+  /* Backgrounds */
+  --color-app-bg: #f8fafc; /* Slate 50 */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* Hides the background color by using a massive transition delay */
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+
+  /* Forces the text color to stay what you want (e.g., black/dark blue) */
+  -webkit-text-fill-color: #1e1b4b !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.loader {
+  @apply animate-spin border-[2px] border-white/20 mx-auto  border-t-white/90  rounded-full aspect-square;
+}
+
+.button {
+  @apply disabled:opacity-60 disabled:pointer-events-none active:translate-y-px cursor-pointer duration-200;
+}
+
+.modal {
+  @apply relative max-h-[95vh] overflow-auto max-w-11/12  rounded-lg bg-white;
+}
+
+.card {
+  @apply rounded-xl border border-gray-200 shadow-lg p-6;
+}
+
+.scroll-hover {
+  @apply group-hover:[&::-webkit-scrollbar-track]:!bg-[#00000222]  [&::-webkit-scrollbar-track]:!bg-[#fffff000] group-hover:[&::-webkit-scrollbar-thumb]:!border-white/10  [&::-webkit-scrollbar-thumb]:!border-transparent [&::-webkit-scrollbar]:!w-2;
+}
+
+.scroll-rounded {
+  @apply [&::-webkit-scrollbar-track]:rounded-md [&::-webkit-scrollbar-thumb]:rounded-md;
+}
+
+.scrollnone {
+  overflow: auto;
+  /* Hide default scrollbar */
+  scrollbar-width: none; /* Not fully supported yet, but helps */
+}
+
+.scrollnone::-webkit-scrollbar {
+  display: none; /* Hide scrollbar track */
+}
+
+.fadeIn {
+  animation: fade-in 1.2s;
+}
+.popFade {
+  animation: fade-in 0.3s;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}

@@ -40,7 +40,9 @@ function Input({
   return (
     <article className={` ${classContainer}`}>
       {title && (
-        <h1 className="text-textPri text-[15px] font-medium mb-2 ml-1">{title}</h1>
+        <h1 className="text-textPri text-[15px] font-medium mb-2 ml-1 line-clamp-1 break-all">
+          {title}
+        </h1>
       )}
       <aside
         onClick={() => {

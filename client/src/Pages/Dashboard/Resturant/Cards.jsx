@@ -3,7 +3,7 @@ import { MdLocalDining, MdGroups, MdPieChart } from "react-icons/md";
 
 function Cards() {
   return (
-    <section className="grid grid-cols-3 gap-4 h-40 my-4">
+    <section className="grid md:grid-cols-3 gap-4 my-4">
       <CARD
         title="Daily Meals Served"
         icon={<MdLocalDining />}

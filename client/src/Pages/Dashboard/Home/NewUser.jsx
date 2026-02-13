@@ -36,12 +36,10 @@ function NewUser({ setopen, open }) {
     }
   };
 
+  console.log({ rooms });
+
   return (
-    <Modal
-      open={open}
-      onClose={setopen}
-      className="modal min-w-165 "
-    >
+    <Modal open={open} onClose={setopen} className="modal w-165 max-w-11/12">
       <MdClose
         onClick={() => setopen(false)}
         className="absolute top-6 right-6 text-xl hover:text-red-600 cursor-pointer button text-gray-500"
@@ -58,7 +56,7 @@ function NewUser({ setopen, open }) {
           PERSONAL DETAILS
         </h1>
         {/*  PERSONAL DETAILS  */}
-        <div className="grid grid-cols-2 md:gap-4 gap-2">
+        <div className="grid md:grid-cols-2 md:gap-4 gap-2">
           <Input
             name="fullName"
             set={setCredentials}
@@ -83,7 +81,7 @@ function NewUser({ setopen, open }) {
         <h1 className=" mb-3 font-bold tracking-wide text-gray-400">
           ACCOUNT CREDENTIALS
         </h1>
-        <div className="grid grid-cols-2 md:gap-4 gap-2">
+        <div className="grid md:grid-cols-2 md:gap-4 gap-2">
           <Input
             name="email"
             set={setCredentials}

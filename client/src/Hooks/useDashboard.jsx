@@ -122,6 +122,7 @@ export const useGetRooms = (wing) => {
       const resp = await api.get(
         `/api/dashboard/getRooms?${wing ? `wing=${wing}` : ""}`,
       );
+
       if (resp) setRooms(resp.data);
     } catch (error) {
       console.log(error);

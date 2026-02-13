@@ -4,7 +4,7 @@ import { GiAutoRepair } from "react-icons/gi";
 
 function Cards() {
   return (
-    <section className="grid grid-cols-3 gap-4 h-44 my-4">
+    <section className="grid md:grid-cols-3 gap-4  my-4">
       <CARD
         title="Total Rooms"
         icon={<IoIosBed />}

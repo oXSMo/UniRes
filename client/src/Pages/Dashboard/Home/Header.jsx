@@ -8,20 +8,22 @@ function Header() {
   const [credentials, setCredentials] = useState({ search: "" });
   const [open, setOpen] = useState(false);
   return (
-    <header className="flex sticky top-0 items-center justify-between px-4 py-1 border-b border-gray-300 shadow-lg shadow-black/30 bg-[#F8FAFC] z-10">
+    <header className="flex sticky top-0 items-center justify-between px-4 py-1 border-b border-gray-300 shadow-lg shadow-black/30 bg-[#F8FAFC] z-40">
       <aside className="flex gap-6 items-center">
         <h1 className="text-lg font-bold tracking-wide">Dashboard Overview</h1>
-        <Input
-          name="search"
-          set={setCredentials}
-          value={credentials.search}
-          placeholder="Search Students,rooms"
-          icon={
-            <div>
-              <IoSearchSharp className="scale-125 opacity-40!" />
-            </div>
-          }
-        />
+        <div className="md:block hidden">
+          <Input
+            name="search"
+            set={setCredentials}
+            value={credentials.search}
+            placeholder="Search Students,rooms"
+            icon={
+              <div>
+                <IoSearchSharp className="scale-125 opacity-40!" />
+              </div>
+            }
+          />
+        </div>
       </aside>
 
       <aside className="flex items-center gap-6 text-[26px] text-gray-500">

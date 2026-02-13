@@ -15,7 +15,7 @@ function Login({ setopen, open, setSign }) {
     if (await login()) {
       setopen(false);
       toast.success("Signed Up Successfuly");
-      navigate("/dashboard")
+      navigate("/dashboard");
     }
   };
   return (
@@ -55,12 +55,6 @@ function Login({ setopen, open, setSign }) {
             "Login"
           )}
         </button>
-        <h1
-          onClick={() => setSign("signup")}
-          className="text-center text-sm mt-2 opacity-80 cursor-pointer hover:text-primary  "
-        >
-          Create New Account
-        </h1>
       </form>
     </article>
   );

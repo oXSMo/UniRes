@@ -7,7 +7,7 @@ function Header() {
         <h1 className="text-[32px] font-extrabold tracking-wide text-[#0F172A]">
           Settings
         </h1>
-        <h2 className="text- font-medium text-gray-400 mt-1.5">
+        <h2 className="text- font-medium text-gray-400 mt-1.5 w-10/12">
           Manage your university residence configirations and administrative
           staff.
         </h2>

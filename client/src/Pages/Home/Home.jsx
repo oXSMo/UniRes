@@ -1,17 +1,20 @@
 import Navbar from "./Navbar";
 import bg from "../../Assets/UniBG.jpg";
 import { LuChevronRight } from "react-icons/lu";
+import { useState } from "react";
 function Home() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <main className="h-screen grid grid-rows-[auto_1fr] max-w-8xl mx-auto w-full relative">
-      <Navbar />
+    <main className="h-screen grid grid-rows-[auto_1fr] max-w-8xl mx-auto w-full overflow-hidden relative">
+      <Navbar open={open} setOpen={setOpen} />
       <article className="w-full h-full grid grid-cols-[1fr_auto_1fr] relative z-10">
-        <aside className="h-full self-center grid items-center px-10 pl-16">
+        <aside className="h-full self-center grid items-center md:px-10 px-4 md:pl-16">
           <div className="space-y-10 relative ">
             <p className="absolute right-0 top-6 text-xl opacity-60 z-0">
               ++++
             </p>
-            <h1 className="text-[110px] font-black tracking-wider leading-24">
+            <h1 className="md:text-[110px] text-[85px] font-black tracking-wider leading-24">
               <span className="text-primary">REAL</span> <br /> ESTATE
             </h1>
             <p>
@@ -20,13 +23,13 @@ function Home() {
               nam tenetur tempore unde aut pariatur necessitatibus deleniti sunt
               ea. Ex dolor eaque consequatur?
             </p>
-            <button className="rounded-full cursor-pointer border-black border-2 px-8 py-1.5 font-semibold tracking-wide w-32">
+            <button onClick={()=>setOpen(true)} className="md:hidden block rounded-full cursor-pointer border-black border-2 px-8 py-1.5 font-semibold tracking-wide w-32">
               Sign In
             </button>
           </div>
         </aside>
 
-        <aside className="grid grid-rows-3 [&_h1]:text-4xl [&_h1]:font-bold [&_p]:font-medium [&_p]:text-2xl py-8">
+        <aside className="md:grid hidden grid-rows-3  [&_h1]:text-4xl [&_h1]:font-bold [&_p]:font-medium [&_p]:text-2xl py-8">
           <h1>
             100+ <br /> <p>ROOM</p>
           </h1>
@@ -37,7 +40,7 @@ function Home() {
             100+ <br /> <p>ROOM</p>
           </h1>
         </aside>
-        <aside className="w-full h-full items-center grid relative">
+        <aside className="w-full h-full items-center md:grid hidden relative">
           <CHEVS />
           <PLUSES />
           <div className="absolute right-0 h-full w-1/2 bg-[#222222] z-0" />

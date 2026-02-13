@@ -3,8 +3,7 @@ import Modal from "../../Components/common/Modal";
 import Login from "../../Components/Forms/Login";
 import SignUp from "../../Components/Forms/SignUp";
 
-function Navbar() {
-  const [open, setOpen] = useState(false);
+function Navbar({open,setOpen}) {
   const [sign, setSign] = useState("login");
   return (
     <header className="grid grid-cols-2 xl:h-24 h-16 items-center">
@@ -19,7 +18,7 @@ function Navbar() {
       <article className="justify-self-end px-8">
         <button
           onClick={() => setOpen(true)}
-          className="rounded-full cursor-pointer border-black border-2 px-8 py-1.5 font-semibold tracking-wide"
+          className="md:block hidden rounded-full cursor-pointer border-black border-2 px-8 py-1.5 font-semibold tracking-wide"
         >
           Sign In
         </button>

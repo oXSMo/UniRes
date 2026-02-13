@@ -2,7 +2,7 @@ import Chart from "react-apexcharts";
 
 function Cards() {
   return (
-    <section className="grid grid-cols-3 gap-4   my-4">
+    <section className="grid md:grid-cols-2 gap-4   my-4">
       <CARD title="Role Distrubition" total={"450 Total"}>
         <div className="relative w-full bg-primary/15 rounded-full h-2.5 overflow-hidden mt-3">
           <div className="absolute h-full w-[96%] bg-primary" />

@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 function Dashboard() {
   return (
-    <main className="grid grid-cols-[auto_1fr] w-full h-svh">
+    <main className="grid md:grid-cols-[auto_1fr] w-full h-svh">
       <Sidebar />
       <Outlet />
     </main>

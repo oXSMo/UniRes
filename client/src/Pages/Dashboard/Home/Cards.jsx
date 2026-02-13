@@ -1,9 +1,9 @@
 import React from "react";
-import { MdPeople, MdTrendingUp } from "react-icons/md";
+import { MdCalculate, MdPending, MdPeople, MdTrendingUp } from "react-icons/md";
 
 function Cards() {
   return (
-    <article className="grid grid-cols-3 gap-4">
+    <article className="grid md:grid-cols-3 gap-4">
       <CARD
         title="Total students"
         much={1240}
@@ -13,13 +13,13 @@ function Cards() {
       <CARD
         title="Oppupancy Rate"
         much={"94%"}
-        icon={<MdPeople />}
+        icon={<MdCalculate />}
         progress={{ up: true, results: "1.3" }}
       />
       <CARD
         title="Pending Requests"
         much={18}
-        icon={<MdPeople />}
+        icon={<MdPending />}
         progress={{ up: false, results: "5" }}
       />
 

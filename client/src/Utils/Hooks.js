@@ -38,7 +38,7 @@ import axios from "axios";
 // };
 
 export const useScreenWidth = () => {
-  const [width, setwidth] = useState();
+  const [width, setwidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {

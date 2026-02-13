@@ -23,7 +23,7 @@ function NewRoom({ open, setOpen }) {
     }
   };
   return (
-    <Modal open={open} onClose={setOpen} className="modal min-h-44 min-w-165">
+    <Modal open={open} onClose={setOpen} className="modal w-165 max-w-11/12">
       <MdClose
         onClick={() => setOpen(false)}
         className="absolute top-6 right-6 text-xl hover:text-red-600 cursor-pointer button text-gray-500"
@@ -40,7 +40,7 @@ function NewRoom({ open, setOpen }) {
           ROOM SPECIFICATIONS
         </h1>
 
-        <aside className="grid grid-cols-2 md:gap-4 gap-2">
+        <aside className="grid md:grid-cols-2 md:gap-4 gap-2">
           <Input
             name="number"
             set={setCredentials}
@@ -67,7 +67,7 @@ function NewRoom({ open, setOpen }) {
         <h1 className="text-[17px] mb-3 font-bold tracking-wide text-gray-400">
           STATUS AND CLASSIFICATION
         </h1>
-        <aside className="grid grid-cols-2 md:gap-4 gap-2">
+        <aside className="grid md:grid-cols-2 md:gap-4 gap-2">
           <Select
             name="type"
             placeholder="Select Room Type"
@@ -101,7 +101,7 @@ function NewRoom({ open, setOpen }) {
             type="submit"
             className="button font-medium bg-primary rounded-md text-white  w-32 h-10"
           >
-            {loading ? <div className="loader w-5 " /> : "Create User"}
+            {loading ? <div className="loader w-5 " /> : "Create Room"}
           </button>
         </aside>
       </form>

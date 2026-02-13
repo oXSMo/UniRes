@@ -16,7 +16,7 @@ function Charts() {
 
         <WingBarChart />
       </section>
-      <aside className="card overflow-hidden xl:block hidden">
+      <aside className="card overflow-hidden ">
         <div className="flex justify-between">
           <h1 className="text-lg tracking-wider font-bold ">
             Room Status <br />

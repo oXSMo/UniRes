@@ -1,5 +1,4 @@
-import React from "react";
-import Header from "./header";
+import Header from "./Header";
 import Cards from "./Cards";
 import Charts from "./Charts";
 import Table from "./Table";
